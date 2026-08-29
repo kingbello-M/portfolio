@@ -3,147 +3,405 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bello Mohamed | Portfolio</title>
+    <meta name="description" content="Bello Mohamed — Software Engineer, Full Stack Developer and AI Engineer building modern web experiences that solve real-world problems.">
+    <title>Bello Mohamed | Software Engineer & Full Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <noscript><style>.reveal { opacity: 1; transform: none; }</style></noscript>
 </head>
 <body>
+
+    <div class="noise" aria-hidden="true"></div>
+
     <header class="header">
-        <a href="#home" class="logo">BELLO</a>
+        <a href="#home" class="logo">BELLO<span>.</span></a>
+
+        <nav class="navbar" id="navbar">
+            <a href="#home" class="active" data-i18n="navHome">Home</a>
+            <a href="#about" data-i18n="navAbout">About</a>
+            <a href="#services" data-i18n="navServices">Services</a>
+            <a href="#languages" data-i18n="navStack">Stack</a>
+            <a href="#projects" data-i18n="navProjects">Projects</a>
+            <a href="#contacts" data-i18n="navContact">Contact</a>
+        </nav>
 
         <div class="header-actions">
-            <button class="theme-toggle" id="darkmodebtn" type="button" aria-label="Toggle dark mode">🌙</button>
+            <button class="theme-toggle lang-toggle" id="lang-toggle" type="button" aria-label="Switch language to French">FR</button>
+            <button class="theme-toggle" id="darkmodebtn" type="button" aria-label="Toggle dark mode">☾</button>
+            <a href="https://wa.me/237650240983" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm header-cta" data-i18n="hireMe">Hire me</a>
             <button class="menu-toggle" id="menu-icon" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
         </div>
-
-        <nav class="navbar">
-            <a href="#home">Home page</a>
-            <a href="#about">About section</a>
-            <a href="#skills">skills</a>
-            <a href="#projects">projects</a>
-            <a href="#contacts">contacts</a>
-        </nav>
     </header>
 
     <section class="home" id="home">
-        <div class="home-img">
-            <img src="./orange.jpg" alt="profile image">
-        </div>
+        <div class="orb orb-1" aria-hidden="true"></div>
+        <div class="orb orb-2" aria-hidden="true"></div>
+        <div class="orb orb-3" aria-hidden="true"></div>
 
         <div class="home-content">
-            <h3>Hello, I’m</h3>
-            <h1>Bello Mohamed</h1>
-            <h3>I am a <span class="multiple-text">software engineer</span></h3>
-            <p>I create practical software solutions, build modern web experiences, and turn ideas into products that solve real-world problems.</p>
-            <a href="#" class="btn">Download CV</a>
+            <p class="greeting reveal"><span class="wave">👋</span> <span data-i18n="greeting">Hello, I'm</span></p>
+            <h1 class="reveal">Bello <span class="gradient-text">Mohamed</span></h1>
+            <p class="role reveal"><span data-i18n="roleLead">I'm a</span> <span class="multiple-text"></span></p>
+            <p class="home-desc reveal" data-i18n="homeDesc">
+                I craft practical software solutions, build modern web experiences and turn ideas into products that solve real-world problems — powered by clean code and thoughtful design.
+            </p>
+
+            <div class="btn-group reveal">
+                <a href="#contacts" class="btn btn-primary"><span data-i18n="letsWork">Let's work together</span></a>
+                <a href="https://wa.me/237650240983?text=Hi%20Bello!%20I%20found%20your%20portfolio%20and%20I'd%20love%20to%20talk%20about%20a%20project." target="_blank" rel="noopener noreferrer" class="btn btn-outline" data-i18n="chatWhatsApp">Chat on WhatsApp</a>
+            </div>
+
+            <div class="home-stats reveal">
+                <div class="stat">
+                    <span class="stat-number" data-count="6">0</span><span class="stat-plus">+</span>
+                    <p data-i18n="statLanguages">Languages Mastered</p>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="15">0</span><span class="stat-plus">+</span>
+                    <p data-i18n="statProjects">Projects Built</p>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="100">0</span><span class="stat-plus">%</span>
+                    <p data-i18n="statCommitment">Commitment</p>
+                </div>
+            </div>
+
+            <div class="home-social reveal">
+                <a href="https://github.com/kingbello-M" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2.15c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.69 1.25 3.34.95.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.09 0 4.41-2.69 5.38-5.25 5.66.41.35.77 1.05.77 2.12v3.14c0 .3.21.66.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+                </a>
+                <a href="https://www.instagram.com/kingbello_M/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.73 2.7 21.31.28 16.95.07 15.67.01 15.26 0 12 0zM12 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg>
+                </a>
+                <a href="https://wa.me/237650240983" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.47 1.07 2.88 1.22 3.08.15.2 2.11 3.22 5.1 4.51.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35zM12.05 21.79h-.01a9.83 9.83 0 0 1-5.01-1.37l-.36-.21-3.73.98.99-3.63-.23-.37a9.8 9.8 0 0 1-1.5-5.24c0-5.42 4.41-9.83 9.84-9.83 2.63 0 5.1 1.02 6.96 2.88a9.78 9.78 0 0 1 2.88 6.97c0 5.42-4.42 9.82-9.83 9.82zm8.4-18.23A11.72 11.72 0 0 0 12.04 0C5.5 0 .14 5.36.14 11.94c0 2.1.55 4.15 1.6 5.96L0 24l6.27-1.64a12 12 0 0 0 5.77 1.47c6.54 0 11.9-5.36 11.9-11.94 0-3.19-1.24-6.19-3.49-8.33z"/></svg>
+                </a>
+                <a href="mailto:belloboris83@gmail.com" aria-label="Email">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.25-8 5.01-8-5.01V6.5l8 5 8-5V8.25z"/></svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="home-visual reveal">
+            <div class="profile-ring">
+                <img src="./AiBlW (1).jpg" alt="Bello Mohamed — profile photo">
+            </div>
+            <div class="floating-chip chip-1"><span class="chip-dot" style="background:#eab308"></span> <span data-i18n="chipFS">Full Stack Developer</span></div>
+            <div class="floating-chip chip-2"><span class="chip-dot" style="background:#22d3ee"></span> <span data-i18n="chipAI">AI Engineer</span></div>
+            <div class="floating-chip chip-3"><span class="chip-dot" style="background:#a78bfa"></span> <span data-i18n="chipPS">Problem Solver</span></div>
         </div>
     </section>
 
     <section class="about" id="about">
-        <div class="about-content">
-            <h2 class="heading">About <span>me</span></h2>
-            <h3>I am a <span>FULL STACK DEVELOPER</span></h3>
-            <p>My main aim is to provide solutions to software related problems. I am also an AI engineer who builds automated systems that help companies solve bigger tasks quickly and efficiently. I also work with AI prompting to make development faster and more accurate.</p>
-            <a href="#" class="btn">Read More</a>
+        <div class="about-visual reveal">
+            <div class="about-frame">
+                <img src="./ChatGPT Image Aug 29, 2026, 02_03_06 PM.png" alt="Bello Mohamed about image">
+                <div class="experience-badge">
+                    <span class="experience-years">2+</span>
+                    <span class="experience-label"><span data-i18n="expYears">Years of</span><br><span data-i18n="expBuilding">Building</span></span>
+                </div>
+            </div>
+            <div class="about-strip">
+                <div class="strip-item"><span class="strip-num">2+</span><span class="strip-label" data-i18n="stripExperience">Years Experience</span></div>
+                <div class="strip-item"><span class="strip-num">6+</span><span class="strip-label" data-i18n="stripLanguages">Languages Mastered</span></div>
+                <div class="strip-item"><span class="strip-num">15+</span><span class="strip-label" data-i18n="stripProjects">Projects Built</span></div>
+            </div>
         </div>
 
-        <div class="about-img">
-            <img src="./portf.jpg" alt="about image">
+        <div class="about-content">
+            <p class="section-label reveal" data-i18n="aboutLabel">Get to know me</p>
+            <h2 class="heading reveal"><span data-i18n="aboutWord">About</span> <span class="gradient-text" data-i18n="aboutMeWord">me</span></h2>
+            <h3 class="reveal"><span class="plain" data-i18n="aboutTagline1">A passionate</span> <span data-i18n="aboutTagline2">FULL STACK DEVELOPER</span> <span class="plain" data-i18n="aboutTagline3">& AI Engineer</span></h3>
+            <p class="reveal" data-i18n="aboutText">
+                My main aim is to provide solutions to software related problems. I build automated systems that help companies solve bigger tasks quickly and efficiently — and I use AI prompting to make development faster, smarter and more accurate.
+            </p>
+            <ul class="about-details reveal">
+                <li><strong data-i18n="detailName">Name:</strong> Bello Mohamed</li>
+                <li><strong data-i18n="detailEmail">Email:</strong> belloboris83@gmail.com</li>
+                <li><strong data-i18n="detailLocation">Location:</strong> <span data-i18n="countryName">Cameroon</span></li>
+                <li><strong data-i18n="detailStatus">Status:</strong> <span data-i18n="statusValue">Available for freelance & full-time</span></li>
+                <li><strong data-i18n="detailExperience">Experience:</strong> <span data-i18n="expValue">2+ years of building</span></li>
+            </ul>
+            <div class="btn-group reveal">
+                <a href="#contacts" class="btn btn-primary"><span data-i18n="getInTouch">Get in touch</span></a>
+                <a href="https://wa.me/237650240983?text=Hi%20Bello!%20Please%20send%20me%20your%20CV." target="_blank" rel="noopener noreferrer" class="btn btn-outline" data-i18n="requestCV">Request CV via WhatsApp</a>
+            </div>
         </div>
     </section>
 
-    <section class="skills" id="skills">
-        <div class="section-heading">
-            <p class="section-label">What I Do</p>
-            <h2 class="heading">My <span>services</span></h2>
-            <p class="section-intro">I create polished digital experiences that are practical, modern, and built around user needs.</p>
+    <section class="services" id="services">
+        <div class="section-heading reveal">
+            <p class="section-label" data-i18n="servicesLabel">What I do</p>
+            <h2 class="heading"><span class="plain" data-i18n="my">My</span> <span class="gradient-text" data-i18n="servicesWord">Services</span></h2>
+            <p class="section-intro" data-i18n="servicesIntro">I create polished digital experiences that are practical, modern and built around real user needs.</p>
         </div>
 
-        <div class="skills-container">
-            <div class="skills-box">
-                <div class="skill-icon">💻</div>
-                <h3>Web Development</h3>
-                <p>I build responsive websites and web apps that feel smooth, professional, and easy to use.</p>
-            </div>
-            <div class="skills-box">
-                <div class="skill-icon">🎨</div>
-                <h3>UI/UX Design</h3>
-                <p>I design interfaces that are visually appealing, intuitive, and focused on creating a strong user experience.</p>
-            </div>
-            <div class="skills-box">
-                <div class="skill-icon">📱</div>
-                <h3>App Development</h3>
-                <p>I develop functional applications for different purposes, from productivity tools to creative digital products.</p>
-            </div>
+        <div class="services-grid">
+            <article class="service-card reveal">
+                <div class="service-icon">&#128187;</div>
+                <h3 data-i18n="serviceWeb">Web Development</h3>
+                <p data-i18n="serviceWebText">I build responsive websites and web apps that feel smooth, professional and easy to use on every device.</p>
+                <span class="service-tag">HTML · CSS · JS · PHP</span>
+            </article>
+            <article class="service-card reveal" data-delay="100">
+                <div class="service-icon">&#127912;</div>
+                <h3 data-i18n="serviceUIDesign">UI/UX Design</h3>
+                <p data-i18n="serviceUIDesignText">I design interfaces that are visually appealing, intuitive and focused on creating a strong user experience.</p>
+                <span class="service-tag">Figma · Prototyping</span>
+            </article>
+            <article class="service-card reveal" data-delay="200">
+                <div class="service-icon">&#128241;</div>
+                <h3 data-i18n="serviceApp">App Development</h3>
+                <p data-i18n="serviceAppText">I develop functional applications — from productivity tools to creative products that businesses rely on.</p>
+                <span class="service-tag">Node.js · Python</span>
+            </article>
+        </div>
+    </section>
+
+    <section class="languages" id="languages">
+        <div class="section-heading reveal">
+            <p class="section-label" data-i18n="techStackLabel">Tech Stack</p>
+            <h2 class="heading"><span class="plain" data-i18n="languagesHeading1">Languages I've</span> <span class="gradient-text" data-i18n="languagesHeading2">Mastered</span></h2>
+            <p class="section-intro" data-i18n="languagesIntro">The tools and languages I use every day to ship clean, reliable and scalable software.</p>
+        </div>
+
+        <div class="lang-grid">
+            <article class="lang-card reveal">
+                <div class="lang-logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python logo">
+                </div>
+                <h3>Python</h3>
+                <div class="level-bar"><span style="width: 90%"></span></div>
+                <p class="lang-level" data-i18n="levelAdvanced">Advanced</p>
+            </article>
+            <article class="lang-card reveal" data-delay="50">
+                <div class="lang-logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP logo">
+                </div>
+                <h3>PHP</h3>
+                <div class="level-bar"><span style="width: 85%"></span></div>
+                <p class="lang-level" data-i18n="levelAdvanced">Advanced</p>
+            </article>
+            <article class="lang-card reveal" data-delay="100">
+                <div class="lang-logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript logo">
+                </div>
+                <h3>JavaScript</h3>
+                <div class="level-bar"><span style="width: 92%"></span></div>
+                <p class="lang-level" data-i18n="levelAdvanced">Advanced</p>
+            </article>
+            <article class="lang-card reveal" data-delay="50">
+                <div class="lang-logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5 logo">
+                </div>
+                <h3>HTML</h3>
+                <div class="level-bar"><span style="width: 96%"></span></div>
+                <p class="lang-level" data-i18n="levelExpert">Expert</p>
+            </article>
+            <article class="lang-card reveal" data-delay="100">
+                <div class="lang-logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3 logo">
+                </div>
+                <h3>CSS</h3>
+                <div class="level-bar"><span style="width: 90%"></span></div>
+                <p class="lang-level" data-i18n="levelAdvanced">Advanced</p>
+            </article>
+            <article class="lang-card reveal" data-delay="150">
+                <div class="lang-logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js logo">
+                </div>
+                <h3>Node.js</h3>
+                <div class="level-bar"><span style="width: 82%"></span></div>
+                <p class="lang-level" data-i18n="levelAdvanced">Advanced</p>
+            </article>
         </div>
     </section>
 
     <section class="projects" id="projects">
-        <div class="projects-box">
-            <div class="section-heading">
-                <p class="section-label">Selected Work</p>
-                <h2 class="heading">Featured <span>Projects</span></h2>
-                <p class="section-intro">A collection of practical products and digital experiences designed to solve real problems with clean user interfaces.</p>
-            </div>
+        <div class="section-heading reveal">
+            <p class="section-label" data-i18n="projectsLabel">Selected work</p>
+            <h2 class="heading"><span class="plain" data-i18n="projectsHeading1">Featured</span> <span class="gradient-text" data-i18n="projectsHeading2">Projects</span></h2>
+            <p class="section-intro" data-i18n="projectsIntro">A collection of practical products and digital experiences designed to solve real problems with clean, modern interfaces.</p>
+        </div>
 
-            <div class="wrapper">
-                <article class="projects-items">
-                    <a href="https://spmarket-flow.base44.app" target="_blank" rel="noopener noreferrer">
-                        <img src="./img/WhatsApp Image 2026-07-15 at 3.43.42 AM.jpeg" alt="S.P.Marketing project preview">
-                        <div class="project-content">
-                            <h2>S.P.Marketing</h2>
-                            <p class="project-type">Marketplace App</p>
-                            <p>A polished platform for listing and discovering second-hand products with clear details and simple browsing.</p>
+        <div class="project-grid">
+            <article class="project-card reveal">
+                <a href="https://btscom.vercel.app" target="_blank" rel="noopener noreferrer" class="project-card-link">
+                    <div class="project-thumb">
+                        <img src="./img/btscom.svg" alt="BTSCOM — online exam platform">
+                        <div class="project-overlay">
+                            <span data-i18n="visitLive">Visit live project</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
                         </div>
-                    </a>
-                </article>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-type" data-i18n="project1Type">EdTech · Exam Platform</p>
+                        <h3>BTSCOM</h3>
+                        <p data-i18n="project1Text">An exam platform that lets teachers set online exams in minutes. Students register, take the exam and submit — then the built-in AI assistant auto-corrects the multiple-choice questions and helps distribute all results at once.</p>
+                        <div class="project-tags">
+                            <span data-i18n="project1Tag1">Online Exams</span><span data-i18n="project1Tag2">AI Grading</span><span data-i18n="project1Tag3">Result Distribution</span>
+                        </div>
+                    </div>
+                </a>
+            </article>
 
-                <article class="projects-items">
-                    <a href="https://vibe-spark-flow.base44.app" target="_blank" rel="noopener noreferrer">
-                        <img src="./img/vibe app.jpg" alt="Vibe generator project preview">
-                        <div class="project-content">
-                            <h2>Vibe Generator</h2>
-                            <p class="project-type">Creative Tool</p>
-                            <p>An interactive experience focused on generating creative text and helping users explore ideas quickly.</p>
+            <article class="project-card reveal" data-delay="100">
+                <a href="https://sell-flyer-by-bello-copy-854f8779.base44.app/" target="_blank" rel="noopener noreferrer" class="project-card-link">
+                    <div class="project-thumb">
+                        <img src="./img/sellflyer.svg" alt="SellFlyer AI — flyer and product website generator">
+                        <div class="project-overlay">
+                            <span data-i18n="visitLive">Visit live project</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
                         </div>
-                    </a>
-                </article>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-type" data-i18n="project2Type">AI · Marketing Tool</p>
+                        <h3>SellFlyer AI</h3>
+                        <p data-i18n="project2Text">Upload a single product photo and instantly get a professional flyer plus a complete product website — ready to publish and share, no design skills needed.</p>
+                        <div class="project-tags">
+                            <span data-i18n="project2Tag1">AI Generator</span><span data-i18n="project2Tag2">Flyer Maker</span><span data-i18n="project2Tag3">Product Website</span>
+                        </div>
+                    </div>
+                </a>
+            </article>
 
-                <article class="projects-items">
-                    <a href="https://avenirbus-htkig5zy.manus.space" target="_blank" rel="noopener noreferrer">
-                        <img src="./img/Buss payment ticket.png" alt="Bus payment system project preview">
-                        <div class="project-content">
-                            <h2>Bus Payment System</h2>
-                            <p class="project-type">Booking Platform</p>
-                            <p>A smart booking experience that simplifies ticket reservations and improves the customer journey.</p>
+            <article class="project-card reveal" data-delay="200">
+                <a href="https://bellovideoeditingwebsite.mystrikingly.com" target="_blank" rel="noopener noreferrer" class="project-card-link">
+                    <div class="project-thumb">
+                        <img src="./img/videoeditor.svg" alt="Video editing portfolio website">
+                        <div class="project-overlay">
+                            <span data-i18n="visitLive">Visit live project</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
                         </div>
-                    </a>
-                </article>
-            </div>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-type" data-i18n="project3Type">Multimedia · Portfolio</p>
+                        <h3 data-i18n="project3Title">Video Editor Portfolio</h3>
+                        <p data-i18n="project3Text">A sleek portfolio showcasing my video editing work — a collection of clips, edits and visual stories crafted for brands and content creators.</p>
+                        <div class="project-tags">
+                            <span data-i18n="project3Tag1">Video Editing</span><span data-i18n="project3Tag2">Showcase</span><span data-i18n="project3Tag3">Creative</span>
+                        </div>
+                    </div>
+                </a>
+            </article>
         </div>
     </section>
 
     <section class="contacts" id="contacts">
-        <h2 class="heading">Contact<span>me</span></h2>
-        <form id="contactForm">
-            <div class="input-box">
-                <input type="text" name="name" placeholder="Your full name" required>
-                <input type="email" name="email" placeholder="Your email address" required>
-                <input type="tel" name="phone" placeholder="Your phone number">
+        <div class="section-heading reveal">
+            <p class="section-label" data-i18n="contactLabel">Contact</p>
+            <h2 class="heading"><span class="plain" data-i18n="contactHeading1">Let's build something</span> <span class="gradient-text" data-i18n="contactHeading2">great together</span></h2>
+            <p class="section-intro" data-i18n="contactIntro">Have a project in mind or just want to say hi? Drop a message — I usually reply within 24 hours.</p>
+        </div>
+
+        <div class="contact-wrap">
+            <div class="contact-info reveal">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg>
+                    </div>
+                    <div class="info-text">
+                        <h4 data-i18n="emailMe">Email Me</h4>
+                        <a href="mailto:belloboris83@gmail.com">belloboris83@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon wa">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.47 1.07 2.88 1.22 3.08.15.2 2.11 3.22 5.1 4.51.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35zM12.05 21.79h-.01a9.83 9.83 0 0 1-5.01-1.37l-.36-.21-3.73.98.99-3.63-.23-.37a9.8 9.8 0 0 1-1.5-5.24c0-5.42 4.41-9.83 9.84-9.83 2.63 0 5.1 1.02 6.96 2.88a9.78 9.78 0 0 1 2.88 6.97c0 5.42-4.42 9.82-9.83 9.82zm8.4-18.23A11.72 11.72 0 0 0 12.04 0C5.5 0 .14 5.36.14 11.94c0 2.1.55 4.15 1.6 5.96L0 24l6.27-1.64a12 12 0 0 0 5.77 1.47c6.54 0 11.9-5.36 11.9-11.94 0-3.19-1.24-6.19-3.49-8.33z"/></svg>
+                    </div>
+                    <div class="info-text">
+                        <h4 data-i18n="whatsappMe">WhatsApp Me</h4>
+                        <a href="https://wa.me/237650240983" target="_blank" rel="noopener noreferrer">+237 650 240 983</a>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <div class="info-text">
+                        <h4 data-i18n="basedIn">Based in</h4>
+                        <p data-i18n="basedInValue">Cameroon · Working worldwide</p>
+                    </div>
+                </div>
+
+                <a href="https://wa.me/237650240983?text=Hi%20Bello!%20I%20found%20your%20portfolio%20and%20I'd%20love%20to%20talk%20about%20a%20project." target="_blank" rel="noopener noreferrer" class="wa-cta">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.47 1.07 2.88 1.22 3.08.15.2 2.11 3.22 5.1 4.51.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35zM12.05 21.79h-.01a9.83 9.83 0 0 1-5.01-1.37l-.36-.21-3.73.98.99-3.63-.23-.37a9.8 9.8 0 0 1-1.5-5.24c0-5.42 4.41-9.83 9.84-9.83 2.63 0 5.1 1.02 6.96 2.88a9.78 9.78 0 0 1 2.88 6.97c0 5.42-4.42 9.82-9.83 9.82zm8.4-18.23A11.72 11.72 0 0 0 12.04 0C5.5 0 .14 5.36.14 11.94c0 2.1.55 4.15 1.6 5.96L0 24l6.27-1.64a12 12 0 0 0 5.77 1.47c6.54 0 11.9-5.36 11.9-11.94 0-3.19-1.24-6.19-3.49-8.33z"/></svg>
+                    <span data-i18n="waCta">Chat with me directly on WhatsApp</span>
+                </a>
             </div>
-            <textarea name="message" rows="8" placeholder="Tell me about your project or idea" required></textarea>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
+
+            <div class="contact-form-card reveal" data-delay="100">
+                <form id="contactForm" novalidate>
+                    <div class="send-method">
+                        <div class="method-toggle">
+                            <button type="button" class="method-btn active" data-method="whatsapp">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.47 1.07 2.88 1.22 3.08.15.2 2.11 3.22 5.1 4.51.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35zM12.05 21.79h-.01a9.83 9.83 0 0 1-5.01-1.37l-.36-.21-3.73.98.99-3.63-.23-.37a9.8 9.8 0 0 1-1.5-5.24c0-5.42 4.41-9.83 9.84-9.83 2.63 0 5.1 1.02 6.96 2.88a9.78 9.78 0 0 1 2.88 6.97c0 5.42-4.42 9.82-9.83 9.82zm8.4-18.23A11.72 11.72 0 0 0 12.04 0C5.5 0 .14 5.36.14 11.94c0 2.1.55 4.15 1.6 5.96L0 24l6.27-1.64a12 12 0 0 0 5.77 1.47c6.54 0 11.9-5.36 11.9-11.94 0-3.19-1.24-6.19-3.49-8.33z"/></svg>
+                                <span data-i18n="methodWhatsapp">WhatsApp</span>
+                            </button>
+                            <button type="button" class="method-btn" data-method="email">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg>
+                                <span data-i18n="methodEmail">Email</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="name" data-i18n="labelName">Full name</label>
+                        <input type="text" id="name" name="name" placeholder="Jane Doe" required data-i18n-placeholder="placeholderName">
+                    </div>
+
+                    <div class="field-row">
+                        <div class="field">
+                            <label for="email" data-i18n="labelEmail">Email address</label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" required data-i18n-placeholder="placeholderEmail">
+                        </div>
+                        <div class="field">
+                            <label for="phone" data-i18n="labelPhone">Phone (optional)</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+237 ..." data-i18n-placeholder="placeholderPhone">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="message" data-i18n="labelMessage">Your message</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Tell me about your project or idea..." required data-i18n-placeholder="placeholderMessage"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+                        <span class="btn-label" data-i18n="sendMessage">Send Message</span>
+                    </button>
+                    <p class="form-hint" data-i18n="formHint">Your message opens directly in your WhatsApp app or email client.</p>
+                </form>
+            </div>
+        </div>
     </section>
 
     <footer class="footer">
-        <div class="social">
-            <a href="https://github.com/kingbello-M" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><span>GH</span></a>
-            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><span>f</span></a>
-            <a href="https://www.instagram.com/kingbello_M/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><span>IG</span></a>
-            <a href="https://t.me/" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><span>T</span></a>
+        <div class="footer-social">
+            <a href="https://github.com/kingbello-M" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2.15c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.69 1.25 3.34.95.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.09 0 4.41-2.69 5.38-5.25 5.66.41.35.77 1.05.77 2.12v3.14c0 .3.21.66.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/kingbello_M/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.73 2.7 21.31.28 16.95.07 15.67.01 15.26 0 12 0zM12 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg>
+            </a>
+            <a href="https://wa.me/237650240983" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.47 1.07 2.88 1.22 3.08.15.2 2.11 3.22 5.1 4.51.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35zM12.05 21.79h-.01a9.83 9.83 0 0 1-5.01-1.37l-.36-.21-3.73.98.99-3.63-.23-.37a9.8 9.8 0 0 1-1.5-5.24c0-5.42 4.41-9.83 9.84-9.83 2.63 0 5.1 1.02 6.96 2.88a9.78 9.78 0 0 1 2.88 6.97c0 5.42-4.42 9.82-9.83 9.82zm8.4-18.23A11.72 11.72 0 0 0 12.04 0C5.5 0 .14 5.36.14 11.94c0 2.1.55 4.15 1.6 5.96L0 24l6.27-1.64a12 12 0 0 0 5.77 1.47c6.54 0 11.9-5.36 11.9-11.94 0-3.19-1.24-6.19-3.49-8.33z"/></svg>
+            </a>
+            <a href="mailto:belloboris83@gmail.com" aria-label="Email">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.25-8 5.01-8-5.01V6.5l8 5 8-5V8.25z"/></svg>
+            </a>
         </div>
-        <p class="copyright">&copy; BELLO MOHAMED - All Rights Reserved</p>
+        <p class="copyright">&copy; <span id="year"></span> Bello Mohamed — <span data-i18n="footerText">Built with passion. All rights reserved.</span></p>
     </footer>
+
+    <a href="#home" class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg>
+    </a>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
     <script src="./port.js"></script>
 </body>

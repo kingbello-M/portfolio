@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="SellFlyer AI flyer and product website generator thumbnail">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2a1055"/>
+      <stop offset="1" stop-color="#12062b"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.3" r="0.6">
+      <stop offset="0" stop-color="#c026d3" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#c026d3" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e879f9"/>
+      <stop offset="1" stop-color="#818cf8"/>
+    </linearGradient>
+    <linearGradient id="scene" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5b21b6"/>
+      <stop offset="1" stop-color="#312e81"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <rect width="800" height="500" fill="url(#glow)"/>
+  <g stroke="#ffffff" stroke-opacity="0.05">
+    <path d="M0 100H800M0 200H800M0 300H800M0 400H800"/>
+    <path d="M100 0V500M200 0V500M300 0V500M400 0V500M500 0V500M600 0V500M700 0V500"/>
+  </g>
+
+  <g transform="translate(400 232)">
+    <rect x="-128" y="-96" width="256" height="192" rx="26" fill="#1c0d3d" stroke="#c084fc" stroke-width="6"/>
+    <circle cx="-45" cy="-42" r="20" fill="#f0abfc"/>
+    <path d="M-128 96L-50 22L-10 62L22 30L94 96Z" fill="#7c3aed"/>
+    <path d="M-128 96L-30 12L-128 36Z" fill="#a855f7" opacity="0.85"/>
+    <path d="M-2 54l-16 10 22 4 4 22 10-16 16 10-4-22 22-4-16-10" fill="#fbbf24"/>
+    <g transform="translate(88 -118)">
+      <path d="M0-22l6 14 14 6-14 6-6 14-6-14-14-6 14-6Z" fill="#e879f9"/>
+      <circle cx="-30" cy="6" r="6" fill="#22d3ee"/>
+      <circle cx="30" cy="-14" r="4.5" fill="#34d399"/>
+    </g>
+  </g>
+
+  <circle cx="180" cy="210" r="8" fill="#f0abfc"/>
+  <circle cx="640" cy="300" r="7" fill="#22d3ee"/>
+
+  <text x="400" y="452" text-anchor="middle" font-family="Sora, Arial, sans-serif" font-size="42" font-weight="700" letter-spacing="1" fill="#ffffff">SellFlyer AI</text>
+  <text x="400" y="484" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" letter-spacing="2.5" fill="#e9d5ff">FLYER &amp; WEBSITE FROM A PHOTO</text>
+</svg>
